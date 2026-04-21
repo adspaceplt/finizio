@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Finizio — Kitchens, Reimagined.</title>
+  <meta name="description" content="Finizio crafts bespoke kitchen and wardrobe solutions that blend timeless design with precision craftsmanship. Get your free quote today." />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Finizio — Kitchens, Reimagined." />
+  <meta property="og:description" content="Finizio crafts bespoke kitchen and wardrobe solutions that blend timeless design with precision craftsmanship." />
+  <meta property="og:image" content="/assets/finizio-logo.png" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Finizio — Kitchens, Reimagined." />
+  <meta name="twitter:description" content="Finizio crafts bespoke kitchen and wardrobe solutions that blend timeless design with precision craftsmanship." />
+  <meta name="twitter:image" content="/assets/finizio-logo.png" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/assets/finizio-logo.png" />
+
+  <!-- Inter font — display=swap keeps text visible during load -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" />
+
+  <style>
+    /* ── Reset ─────────────────────────────────────────── */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      height: 100%;
+    }
+
+    /* ── Page shell ─────────────────────────────────────── */
+    body {
+      font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont,
+                   'Segoe UI', Roboto, sans-serif;
+      color: #1A1A1A;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      /*
+       * Layer 1 (top): ultra-faint SVG fractal noise — premium texture.
+       * Layer 2 (base): 135° diagonal gradient, warm off-white → soft cream.
+       */
+      background-color: #FAFAF7;
+      background-image:
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='0.025'/%3E%3C/svg%3E"),
+        linear-gradient(135deg, #FAFAF7 0%, #F2EDE4 100%);
+      background-size: 200px 200px, cover;
+    }
+
+    /* ── Content card ───────────────────────────────────── */
+    main {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      width: 100%;
+      max-width: 480px;
+      padding: 48px 24px;
+    }
+
+    /* ── Logo ───────────────────────────────────────────── */
+    .logo {
+      display: block;
+      width: 100%;
+      max-width: 180px;
+      height: auto;
+      margin-bottom: 32px;
+    }
+
+    /* ── Tagline ─────────────────────────────────────────── */
+    .tagline {
+      font-size: 19px;
+      font-weight: 500;
+      letter-spacing: -0.01em;
+      line-height: 1.5;
+      color: #4A4A4A;
+      margin-bottom: 16px;
+    }
+
+    /* ── CTA button ─────────────────────────────────────── */
+    .cta-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 32px;
+      background-color: #1A1A1A;
+      color: #FFFFFF;
+      font-family: inherit;
+      font-size: 15px;
+      font-weight: 600;
+      line-height: 1;
+      text-decoration: none;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      margin-bottom: 40px;
+      box-shadow:
+        0 1px 3px rgba(0, 0, 0, 0.04),
+        0 4px 12px rgba(0, 0, 0, 0.04);
+      transition:
+        background-color 200ms ease-out,
+        transform 200ms ease-out,
+        box-shadow 200ms ease-out;
+    }
+
+    .cta-btn:hover {
+      background-color: #C8A27A;
+      transform: translateY(-2px);
+      box-shadow:
+        0 4px 16px rgba(200, 162, 122, 0.28),
+        0 1px 4px rgba(0, 0, 0, 0.06);
+    }
+
+    .cta-btn:focus-visible {
+      outline: 2px solid #C8A27A;
+      outline-offset: 3px;
+    }
+
+    .cta-btn svg {
+      width: 16px;
+      height: 16px;
+      flex-shrink: 0;
+    }
+
+    /* ── Social row ─────────────────────────────────────── */
+    nav[aria-label="Social links"] {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .social-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      /* 44 × 44 — WCAG 2.5.5 minimum tappable target */
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      color: #2A2A2A;
+      text-decoration: none;
+      background-color: transparent;
+      box-shadow: none;
+      transition:
+        color 200ms ease-out,
+        transform 200ms ease-out,
+        box-shadow 200ms ease-out,
+        background-color 200ms ease-out;
+    }
+
+    .social-link svg {
+      width: 22px;
+      height: 22px;
+      fill: currentColor;
+      display: block;
+      flex-shrink: 0;
+    }
+
+    .social-link:hover {
+      color: #C8A27A;
+      transform: translateY(-2px);
+      background-color: rgba(200, 162, 122, 0.07);
+      box-shadow:
+        0 1px 3px rgba(0, 0, 0, 0.04),
+        0 4px 12px rgba(200, 162, 122, 0.14);
+    }
+
+    .social-link:focus-visible {
+      outline: 2px solid #C8A27A;
+      outline-offset: 2px;
+      border-radius: 12px;
+    }
+
+    /* ── Reduced motion ──────────────────────────────────── */
+    @media (prefers-reduced-motion: reduce) {
+      .cta-btn,
+      .social-link {
+        transition: color 0ms, background-color 0ms;
+      }
+
+      .cta-btn:hover,
+      .social-link:hover {
+        transform: none;
+      }
+    }
+
+    /* ── Mobile ──────────────────────────────────────────── */
+    @media (max-width: 480px) {
+      .logo {
+        max-width: 140px;
+      }
+
+      nav[aria-label="Social links"] {
+        gap: 16px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+
+    <!-- Logo -->
+    <img
+      class="logo"
+      src="/assets/finizio-logo.png"
+      alt="Finizio"
+      width="180"
+      height="60"
+      loading="eager"
+      decoding="async"
+    />
+
+    <!-- Tagline -->
+    <p class="tagline">Kitchens, Reimagined.</p>
+
+    <!-- Primary CTA → WhatsApp -->
+    <a
+      class="cta-btn"
+      href="https://wa.me/+601128680313"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Get a free quote via WhatsApp"
+    >
+      <!-- WhatsApp glyph (Simple Icons path) -->
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+      </svg>
+      Get Quote Now
+    </a>
+
+    <!-- Social links -->
+    <nav aria-label="Social links">
+
+      <!-- Facebook -->

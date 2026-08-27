@@ -32,12 +32,14 @@
   <link rel="stylesheet" href="/assets/css/site.css" />
 
   <!-- Local business data — feeds Google Business Profile and map results.
-       TODO: add openingHoursSpecification once hours are confirmed. -->
+       No openingHoursSpecification: the showroom runs by appointment, so
+       publishing fixed hours here would contradict the contact page. -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "HomeAndConstructionBusiness",
     "name": "Finizio Kitchen",
+    "legalName": "FINIZIO PREMIUM (M) SDN BHD",
     "description": "Custom kitchen cabinet and wardrobe specialists with an in-house manufacturing plant, serving Negeri Sembilan since 2014.",
     "url": "https://finizio.com.my/",
     "logo": "https://finizio.com.my/assets/finizio-logo.png",
@@ -50,6 +52,11 @@
       "addressRegion": "Negeri Sembilan",
       "postalCode": "70300",
       "addressCountry": "MY"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 2.7265669,
+      "longitude": 101.813653
     },
     "areaServed": ["Labu", "Nilai", "Seremban", "Bandar Sri Sendayan", "Port Dickson", "Kajang", "Semenyih", "Bangi"],
     "hasMap": "https://maps.app.goo.gl/d2F9A2YsB2FRC3SK6",
@@ -417,7 +424,7 @@
       </div>
 
       <div class="footer-base">
-        <span>&copy; 2026 Finizio Kitchen (202201025691). All rights reserved.</span>
+        <span>&copy; 2026 Finizio Premium (M) Sdn Bhd (202201025691). All rights reserved.</span>
         <span>Negeri Sembilan · Malaysia</span>
       </div>
     </div>

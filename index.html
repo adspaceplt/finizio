@@ -3,12 +3,9 @@
   ════════════════════════════════════════════════════════════
   FINIZIO — Home
   ------------------------------------------------------------
-  Before going live, replace every [BRACKETED] placeholder.
-  These are real facts about the business that must not be
-  guessed: project count · showroom address · opening hours ·
-  warranty length · lead time · payment terms · reviews.
-  Photos: drop files into /assets/projects/ using the exact
-  filenames listed in /assets/projects/README.md
+  The hero image reads /assets/projects/hero.jpg; until that
+  file exists the slot shows a gradient rather than a broken
+  image. See /assets/projects/README.md.
   ════════════════════════════════════════════════════════════
 -->
 <html lang="en">
@@ -17,7 +14,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>Finizio Kitchen — Custom Kitchen Cabinets &amp; Wardrobes, Negeri Sembilan</title>
-  <meta name="description" content="Established since 2014, Finizio designs, manufactures and installs custom kitchen cabinets and wardrobes across Negeri Sembilan. Own manufacturing plant, premium craftsmanship, free measurement and quotation." />
+  <meta name="description" content="Established since 2014, Finizio designs, manufactures and installs custom kitchen cabinets and wardrobes across Negeri Sembilan. Own manufacturing plant, premium craftsmanship, in-house design and installation." />
   <link rel="canonical" href="https://finizio.com.my/" />
 
   <meta property="og:type" content="website" />
@@ -35,12 +32,14 @@
   <link rel="stylesheet" href="/assets/css/site.css" />
 
   <!-- Local business data — feeds Google Business Profile and map results.
-       TODO: fill in street address, postcode and opening hours. -->
+       No openingHoursSpecification: the showroom runs by appointment, so
+       publishing fixed hours here would contradict the contact page. -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "HomeAndConstructionBusiness",
     "name": "Finizio Kitchen",
+    "legalName": "FINIZIO PREMIUM (M) SDN BHD",
     "description": "Custom kitchen cabinet and wardrobe specialists with an in-house manufacturing plant, serving Negeri Sembilan since 2014.",
     "url": "https://finizio.com.my/",
     "logo": "https://finizio.com.my/assets/finizio-logo.png",
@@ -48,13 +47,19 @@
     "telephone": "+60-11-2868-0313",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "[Showroom street address]",
-      "addressLocality": "[Town]",
+      "streetAddress": "22, Jalan Ainsdale 15/3",
+      "addressLocality": "Labu",
       "addressRegion": "Negeri Sembilan",
-      "postalCode": "[Postcode]",
+      "postalCode": "70300",
       "addressCountry": "MY"
     },
-    "areaServed": ["Seremban", "Nilai", "Port Dickson", "Bandar Sri Sendayan", "Kajang", "Semenyih", "Bangi"],
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 2.7265669,
+      "longitude": 101.813653
+    },
+    "areaServed": ["Labu", "Nilai", "Seremban", "Bandar Sri Sendayan", "Port Dickson", "Kajang", "Semenyih", "Bangi"],
+    "hasMap": "https://maps.app.goo.gl/d2F9A2YsB2FRC3SK6",
     "sameAs": [
       "https://www.facebook.com/finiziokitchenwardrobe",
       "https://www.instagram.com/finiziokitchen/"
@@ -82,16 +87,14 @@
 
       <nav class="nav" id="primary-nav" aria-label="Primary">
         <a href="/" aria-current="page">Home</a>
-        <a href="/portfolio.html">Portfolio</a>
         <a href="/services.html">Services</a>
-        <a href="/pricing.html">Pricing</a>
         <a href="/contact.html">Contact</a>
       </nav>
 
       <a class="btn btn--whatsapp header-cta"
-         href="https://wa.me/601128680313?text=Hi%20Finizio%2C%20I%27d%20like%20a%20free%20quote%20for%20my%20kitchen."
+         href="https://wa.me/601128680313?text=Hi%20Finizio%2C%20I%27d%20like%20a%20quote%20for%20my%20kitchen."
          target="_blank" rel="noopener noreferrer">
-        <svg aria-hidden="true"><use href="#i-wa"/></svg> Free Quote
+        <svg aria-hidden="true"><use href="#i-wa"/></svg> Get a Quote
       </a>
 
       <button class="nav-toggle" type="button" aria-expanded="false"
@@ -113,7 +116,7 @@
             <span class="eyebrow">Established since 2014</span>
             <h1>Custom kitchen cabinets &amp; wardrobes, built to last.</h1>
             <p class="lede">
-              We design and personalise your kitchen from start to finish — and
+              We design and personalize your kitchen from start to finish — and
               because we run our own manufacturing plant, we control the quality
               from the first cut to final installation. Stylish, durable products
               to suit every need and budget.
@@ -121,15 +124,15 @@
 
             <div class="btn-row">
               <a class="btn btn--whatsapp"
-                 href="https://wa.me/601128680313?text=Hi%20Finizio%2C%20I%27d%20like%20a%20free%20measurement%20and%20quote."
+                 href="https://wa.me/601128680313?text=Hi%20Finizio%2C%20I%27d%20like%20a%20measurement%20and%20quote."
                  target="_blank" rel="noopener noreferrer">
-                <svg aria-hidden="true"><use href="#i-wa"/></svg> Get a free quote
+                <svg aria-hidden="true"><use href="#i-wa"/></svg> Get a quote
               </a>
-              <a class="btn btn--ghost" href="/portfolio.html">See our work</a>
+              <a class="btn btn--ghost" href="https://www.instagram.com/finiziokitchen/" target="_blank" rel="noopener noreferrer">See our work</a>
             </div>
 
             <ul class="hero-proof">
-              <li>Free on-site measurement</li>
+              <li>On-site measurement</li>
               <li>Itemised written quotation</li>
               <li>In-house manufacturing</li>
             </ul>
@@ -148,12 +151,26 @@
     <!-- ═══ Stats ══════════════════════════════════════════ -->
     <section class="section section--tight">
       <div class="container">
-        <dl class="stats">
+        <dl class="stats stats--3">
           <div class="stat"><dd>2014</dd><dt>Established since</dt></div>
-          <div class="stat"><dd>[000]</dd><dt>Kitchens completed</dt></div>
           <div class="stat"><dd>In-house</dd><dt>Manufacturing plant</dt></div>
-          <div class="stat"><dd>[X]–[X] wks</dd><dt>Typical lead time</dt></div>
+          <div class="stat"><dd>Custom</dd><dt>Built to your specification</dt></div>
         </dl>
+      </div>
+    </section>
+
+    <!-- ═══ Approach ═══════════════════════════════════════ -->
+    <section class="section">
+      <div class="container container--narrow">
+        <div class="section-head section-head--center">
+          <span class="eyebrow">Personalized kitchen design</span>
+          <h2>Customize and style your space</h2>
+          <p class="lede">
+            We listen to each client's individual requirements, incorporate every
+            idea into practice, and make their dreams come true. Every design is
+            made to our client's specification.
+          </p>
+        </div>
       </div>
     </section>
 
@@ -212,64 +229,25 @@
       </div>
     </section>
 
-    <!-- ═══ Featured work ══════════════════════════════════ -->
+    <!-- ═══ Recent work ════════════════════════════════════ -->
     <section class="section">
-      <div class="container">
-        <div class="section-head">
-          <span class="eyebrow">Recent projects</span>
-          <h2>Work we've handed over</h2>
+      <div class="container container--narrow">
+        <div class="section-head section-head--center">
+          <span class="eyebrow">Recent work</span>
+          <h2>See what we've been building</h2>
           <p class="lede">
-            Real homes across Negeri Sembilan — including the bare developer units
-            they started as.
+            We post completed kitchens, wardrobes and work in progress on
+            Instagram and Facebook — the quickest way to judge the standard of
+            finish for yourself before you get in touch.
           </p>
-        </div>
-
-        <div class="grid grid--3">
-          <a class="project" href="/portfolio.html">
-            <div class="shot shot--4x5" data-label="projects/p1-cover.jpg">
-              <img src="/assets/projects/p1-cover.jpg" alt="Modern minimalist kitchen with island counter" loading="lazy" decoding="async" />
-            </div>
-            <div class="project-body">
-              <h3>[Project name]</h3>
-              <p class="small muted">[Location] · [Property type]</p>
-              <div class="project-meta">
-                <span class="tag tag--brand">Kitchen</span>
-                <span class="tag">Aluminium door</span>
-              </div>
-            </div>
-          </a>
-
-          <a class="project" href="/portfolio.html">
-            <div class="shot shot--4x5" data-label="projects/p2-cover.jpg">
-              <img src="/assets/projects/p2-cover.jpg" alt="Wet and dry kitchen layout" loading="lazy" decoding="async" />
-            </div>
-            <div class="project-body">
-              <h3>[Project name]</h3>
-              <p class="small muted">[Location] · [Property type]</p>
-              <div class="project-meta">
-                <span class="tag tag--brand">Kitchen</span>
-                <span class="tag">Wet &amp; dry</span>
-              </div>
-            </div>
-          </a>
-
-          <a class="project" href="/portfolio.html">
-            <div class="shot shot--4x5" data-label="projects/p3-cover.jpg">
-              <img src="/assets/projects/p3-cover.jpg" alt="Floor to ceiling sliding wardrobe" loading="lazy" decoding="async" />
-            </div>
-            <div class="project-body">
-              <h3>[Project name]</h3>
-              <p class="small muted">[Location] · Master bedroom</p>
-              <div class="project-meta">
-                <span class="tag tag--brand">Wardrobe</span>
-                <span class="tag">Sliding door</span>
-              </div>
-            </div>
-          </a>
-        </div>
-
-        <div class="btn-row">
-          <a class="link-arrow" href="/portfolio.html">View the full portfolio</a>
+          <div class="btn-row btn-row--center">
+            <a class="btn btn--ghost" href="https://www.instagram.com/finiziokitchen/" target="_blank" rel="noopener noreferrer">
+              <svg aria-hidden="true"><use href="#i-ig"/></svg> Instagram
+            </a>
+            <a class="btn btn--ghost" href="https://www.facebook.com/finiziokitchenwardrobe" target="_blank" rel="noopener noreferrer">
+              <svg aria-hidden="true"><use href="#i-fb"/></svg> Facebook
+            </a>
+          </div>
         </div>
       </div>
     </section>
@@ -311,11 +289,11 @@
           </article>
 
           <article class="card">
-            <h3>Published price ranges</h3>
+            <h3>An itemized quotation</h3>
             <p>
-              Our indicative per-foot pricing is on this website, so you can work
-              out roughly what your kitchen costs before speaking to anyone.
-              <a class="link-arrow" href="/pricing.html" style="display:inline-flex;margin-left:4px">See pricing</a>
+              Your quote breaks materials and fittings down line by line, so you
+              can compare it fairly against anyone else's and know exactly what
+              you are signing off on.
             </p>
           </article>
         </div>
@@ -336,11 +314,11 @@
             <p>Message us on WhatsApp with your floor plan or a few photos. We'll give you a rough budget band straight away, before anyone visits.</p>
           </div></div>
           <div class="step"><div>
-            <h3>Free site measurement</h3>
+            <h3>Site measurement</h3>
             <p>We measure on site, check plumbing and power points, and discuss layout — wet and dry separation, appliance sizes, socket positions.</p>
           </div></div>
           <div class="step"><div>
-            <h3>3D design &amp; itemised quote</h3>
+            <h3>3D design &amp; itemized quote</h3>
             <p>You get a 3D visual plus a written quotation listing every material and fitting. Revisions until the layout is right.</p>
           </div></div>
           <div class="step"><div>
@@ -366,7 +344,7 @@
         <div class="faq">
           <details>
             <summary>How much does a kitchen cabinet cost?</summary>
-            <p>Cabinetry is priced per foot run. A typical top-and-bottom run falls within a broad range depending on the door finish, carcass board and countertop you choose — our indicative ranges are on the <a href="/pricing.html">pricing page</a>. A firm figure needs an on-site measurement.</p>
+            <p>Cabinetry is priced per foot run, so the total depends on your wall lengths plus the door finish, carcass board and countertop you choose. Send your floor plan over on WhatsApp and we will come back with an indicative budget — a firm figure needs an on-site measurement.</p>
           </details>
           <details>
             <summary>Which areas do you cover?</summary>
@@ -374,19 +352,11 @@
           </details>
           <details>
             <summary>How long does the whole process take?</summary>
-            <p>[X] to [X] weeks from confirmed design to installation is typical, depending on material availability and the size of the job. Countertop fabrication adds time after base units are installed.</p>
-          </details>
-          <details>
-            <summary>What's the payment schedule?</summary>
-            <p>[Describe your deposit and staged payment terms — e.g. deposit on confirmation, progress payment before installation, balance on handover.]</p>
+            <p>It depends on the size of the job and the materials you choose — we confirm a schedule with you at quotation stage, before any deposit. Countertop fabrication adds time after the base units are installed.</p>
           </details>
           <details>
             <summary>Do you handle hacking, tiling and plumbing?</summary>
-            <p>[Confirm what is and isn't included — whether you coordinate wet works and demolition, or work alongside the customer's own contractor.]</p>
-          </details>
-          <details>
-            <summary>Is there a warranty?</summary>
-            <p>[State your warranty period and what it covers — carcass, doors, hardware — and what it excludes.]</p>
+            <p>Yes. We take on the renovation as a whole — hacking, tiling, plumbing and electrical alongside the carpentry — so you deal with one team instead of coordinating several trades yourself. Tell us the full scope and we'll quote it as one package.</p>
           </details>
         </div>
       </div>
@@ -396,14 +366,14 @@
     <section class="section">
       <div class="container">
         <div class="cta-band">
-          <h2>Get a free measurement and quote</h2>
+          <h2>Get a quote for your kitchen</h2>
           <p>
             Send us your floor plan on WhatsApp and we'll come back with an
-            indicative budget the same day. No obligation, no deposit to talk.
+            indicative budget, then a firm price once we have measured on site.
           </p>
           <div class="btn-row btn-row--center">
             <a class="btn btn--whatsapp"
-               href="https://wa.me/601128680313?text=Hi%20Finizio%2C%20I%27d%20like%20a%20free%20measurement%20and%20quote."
+               href="https://wa.me/601128680313?text=Hi%20Finizio%2C%20I%27d%20like%20a%20measurement%20and%20quote."
                target="_blank" rel="noopener noreferrer">
               <svg aria-hidden="true"><use href="#i-wa"/></svg> WhatsApp us
             </a>
@@ -434,9 +404,7 @@
         <div>
           <h4>Explore</h4>
           <ul>
-            <li><a href="/portfolio.html">Portfolio</a></li>
             <li><a href="/services.html">Services</a></li>
-            <li><a href="/pricing.html">Pricing</a></li>
             <li><a href="/contact.html">Contact</a></li>
           </ul>
         </div>
@@ -444,9 +412,10 @@
         <div>
           <h4>Areas served</h4>
           <ul>
+            <li>Labu &amp; Nilai</li>
             <li>Seremban &amp; Seremban 2</li>
             <li>Bandar Sri Sendayan</li>
-            <li>Nilai &amp; Nilai Impian</li>
+            <li>Nilai Impian</li>
             <li>Port Dickson</li>
             <li>Kajang · Semenyih · Bangi</li>
           </ul>
@@ -455,14 +424,14 @@
       </div>
 
       <div class="footer-base">
-        <span>&copy; 2026 Finizio Kitchen. All rights reserved.</span>
+        <span>&copy; 2026 Finizio Premium (M) Sdn Bhd (202201025691). All rights reserved.</span>
         <span>Negeri Sembilan · Malaysia</span>
       </div>
     </div>
   </footer>
 
   <a class="wa-float"
-     href="https://wa.me/601128680313?text=Hi%20Finizio%2C%20I%27d%20like%20a%20free%20quote."
+     href="https://wa.me/601128680313?text=Hi%20Finizio%2C%20I%27d%20like%20a%20quote."
      target="_blank" rel="noopener noreferrer" aria-label="Chat with Finizio on WhatsApp">
     <svg aria-hidden="true"><use href="#i-wa"/></svg>
   </a>

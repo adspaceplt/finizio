@@ -164,6 +164,8 @@ p { text-wrap: pretty; }
               box-shadow 200ms var(--ease);
 }
 .btn svg { width: 17px; height: 17px; flex-shrink: 0; fill: currentColor; }
+/* Stroke-drawn icons set fill="none"; a CSS fill would override that attribute. */
+.btn svg[fill="none"] { fill: none; stroke: currentColor; }
 
 .btn--primary {
   background: var(--ink);
@@ -440,6 +442,8 @@ p { text-wrap: pretty; }
   border-radius: var(--radius);
   overflow: hidden;
 }
+.stats--3 { grid-template-columns: repeat(3, 1fr); }
+
 .stat {
   background: var(--surface);
   padding: 30px 24px;
@@ -750,6 +754,7 @@ td strong { font-weight: 600; }
   .grid--4 { grid-template-columns: repeat(2, 1fr); }
   .grid--3 { grid-template-columns: repeat(2, 1fr); }
   .stats   { grid-template-columns: repeat(2, 1fr); }
+  .stats--3 { grid-template-columns: repeat(3, 1fr); }
   .footer-grid { grid-template-columns: 1fr 1fr; gap: 36px; }
 }
 
@@ -786,6 +791,7 @@ td strong { font-weight: 600; }
   .section { padding: 60px 0; }
   .container { padding-inline: 20px; }
   .grid--3, .grid--4, .grid--2 { grid-template-columns: 1fr; }
+  .stats, .stats--3 { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr; }
   .card { padding: 26px 24px; }
   .step { grid-template-columns: 44px 1fr; gap: 14px; }

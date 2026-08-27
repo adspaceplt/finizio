@@ -95,10 +95,14 @@
               <div>
                 <dt>Showroom</dt>
                 <dd>
-                  <!-- TODO: real showroom address -->
+                  <!-- TODO: paste the full postal address exactly as it appears
+                       on your Google Business Profile, then mirror it into the
+                       JSON-LD block in index.html so both match. -->
                   [Unit number, street]<br />
                   [Town], [Postcode]<br />
-                  Negeri Sembilan, Malaysia
+                  Negeri Sembilan, Malaysia<br />
+                  <a href="https://maps.app.goo.gl/d2F9A2YsB2FRC3SK6"
+                     target="_blank" rel="noopener noreferrer">Open in Google Maps →</a>
                 </dd>
               </div>
               <div>
@@ -132,9 +136,10 @@
           </div>
 
           <div>
-            <!-- TODO: replace with your Google Maps embed.
-                 Google Maps → find your business → Share → Embed a map →
-                 copy the <iframe> and paste it in place of the one below. -->
+            <!-- TODO: swap in the real embed.
+                 A short maps.app.goo.gl link will NOT work as an iframe src.
+                 Google Maps → find Finizio → Share → Embed a map → Copy HTML,
+                 then paste that <iframe> in place of the one below. -->
             <div class="map-embed">
               <iframe
                 title="Finizio showroom location"
@@ -142,6 +147,16 @@
                 loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
+
+            <div class="btn-row" style="margin-top:18px">
+              <a class="btn btn--ghost"
+                 href="https://maps.app.goo.gl/d2F9A2YsB2FRC3SK6"
+                 target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                Get directions
+              </a>
+            </div>
+
             <p class="small muted" style="margin-top:14px">
               Parking available on site. Walk-ins welcome, though an appointment
               means a designer will be free to sit with you.

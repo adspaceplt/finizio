@@ -164,6 +164,8 @@ p { text-wrap: pretty; }
               box-shadow 200ms var(--ease);
 }
 .btn svg { width: 17px; height: 17px; flex-shrink: 0; fill: currentColor; }
+/* Stroke-drawn icons set fill="none"; a CSS fill would override that attribute. */
+.btn svg[fill="none"] { fill: none; stroke: currentColor; }
 
 .btn--primary {
   background: var(--ink);

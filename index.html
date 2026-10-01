@@ -3,9 +3,11 @@
   ════════════════════════════════════════════════════════════
   FINIZIO — Home
   ------------------------------------------------------------
-  The hero image reads /assets/projects/hero.jpg; until that
-  file exists the slot shows a gradient rather than a broken
-  image. See /assets/projects/README.md.
+  Hero is text-only until a photo exists. To add one: drop
+  /assets/projects/hero.jpg in place, remove "hero-grid--text"
+  from the hero grid, and add after .hero-copy:
+    <div class="hero-media shot"><img src="/assets/projects/hero.jpg"
+      alt="A completed Finizio kitchen" loading="eager" /></div>
   ════════════════════════════════════════════════════════════
 -->
 <html lang="en">
@@ -96,12 +98,6 @@
          target="_blank" rel="noopener noreferrer">
         <svg aria-hidden="true"><use href="#i-wa"/></svg> Get a Quote
       </a>
-
-      <button class="nav-toggle" type="button" aria-expanded="false"
-              aria-controls="primary-nav" aria-label="Toggle menu">
-        <svg class="icon-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="3" y1="7" x2="21" y2="7"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="17" x2="21" y2="17"/></svg>
-        <svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="5" y1="5" x2="19" y2="19"/><line x1="19" y1="5" x2="5" y2="19"/></svg>
-      </button>
     </div>
   </header>
 
@@ -110,7 +106,7 @@
     <!-- ═══ Hero ═══════════════════════════════════════════ -->
     <section class="hero">
       <div class="container">
-        <div class="hero-grid">
+        <div class="hero-grid hero-grid--text">
 
           <div class="hero-copy">
             <span class="eyebrow">Established since 2014</span>
@@ -138,11 +134,6 @@
             </ul>
           </div>
 
-          <div class="hero-media shot" data-label="assets/projects/hero.jpg">
-            <img src="/assets/projects/hero.jpg"
-                 alt="A completed Finizio kitchen with custom cabinetry"
-                 loading="eager" decoding="async" />
-          </div>
 
         </div>
       </div>
@@ -170,61 +161,6 @@
             idea into practice, and make their dreams come true. Every design is
             made to our client's specification.
           </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- ═══ Services ═══════════════════════════════════════ -->
-    <section class="section section--alt">
-      <div class="container">
-        <div class="section-head">
-          <span class="eyebrow">What we build</span>
-          <h2>Built-in carpentry, done properly</h2>
-          <p class="lede">
-            Everything is made to your measurements — not adjusted from a stock
-            carcass. From design and manufacture through to assembly and
-            installation, the work stays with our own team.
-          </p>
-        </div>
-
-        <div class="grid grid--3">
-          <article class="card">
-            <span class="card-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="9" y1="8" x2="9" y2="8"/><line x1="9" y1="16" x2="9" y2="16"/></svg>
-            </span>
-            <h3>Kitchen cabinets</h3>
-            <p>
-              Top and bottom units, tall units, island counters and full wet–dry
-              layouts. Aluminium, melamine or acrylic doors on a moisture-resistant
-              carcass.
-            </p>
-          </article>
-
-          <article class="card">
-            <span class="card-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="12" y1="2" x2="12" y2="22"/><line x1="9.5" y1="11" x2="9.5" y2="13"/><line x1="14.5" y1="11" x2="14.5" y2="13"/></svg>
-            </span>
-            <h3>Wardrobes</h3>
-            <p>
-              Sliding, swing and open-concept walk-ins. Fitted floor-to-ceiling so
-              you don't lose the dead space above the frame.
-            </p>
-          </article>
-
-          <article class="card">
-            <span class="card-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="12" rx="2"/><line x1="7" y1="18" x2="7" y2="21"/><line x1="17" y1="18" x2="17" y2="21"/></svg>
-            </span>
-            <h3>TV consoles &amp; vanity</h3>
-            <p>
-              Feature walls, TV consoles, study desks, shoe cabinets and bathroom
-              vanity units — matched to the same finish as your kitchen.
-            </p>
-          </article>
-        </div>
-
-        <div class="btn-row">
-          <a class="link-arrow" href="/services.html">See all services and finishes</a>
         </div>
       </div>
     </section>
@@ -280,11 +216,13 @@
           </article>
 
           <article class="card">
-            <h3>Moisture-resistant construction</h3>
+            <h3>HMR melamine particleboard</h3>
             <p>
-              Malaysian kitchens are humid and wet work is constant. We build
-              carcasses to resist moisture rather than using particle board, which
-              swells and crumbles once water reaches the core.
+              Our cabinets are built from high moisture-resistant (HMR) melamine
+              particleboard. It resists moisture absorption, which suits a
+              Malaysian kitchen, and its low formaldehyde emissions make it a safer
+              choice indoors.
+              <a class="link-arrow" href="/services.html#material" style="display:inline-flex;margin-left:4px">About our material</a>
             </p>
           </article>
 
@@ -311,23 +249,27 @@
         <div class="steps">
           <div class="step"><div>
             <h3>Tell us about the space</h3>
-            <p>Message us on WhatsApp with your floor plan or a few photos. We'll give you a rough budget band straight away, before anyone visits.</p>
+            <p>Message us on WhatsApp with your floor plan or a few photos, and we'll reply the same day with an indicative budget.</p>
           </div></div>
           <div class="step"><div>
             <h3>Site measurement</h3>
-            <p>We measure on site, check plumbing and power points, and discuss layout — wet and dry separation, appliance sizes, socket positions.</p>
+            <p>We measure on site, check plumbing and power points, and talk through the layout: wet and dry separation, appliance sizes, socket positions.</p>
           </div></div>
           <div class="step"><div>
             <h3>3D design &amp; itemized quote</h3>
-            <p>You get a 3D visual plus a written quotation listing every material and fitting. Revisions until the layout is right.</p>
+            <p>A 3D visual of your space plus a written quotation listing every material and fitting, revised until the layout is right.</p>
           </div></div>
           <div class="step"><div>
             <h3>Manufacturing</h3>
-            <p>Your units are fabricated in our own plant. Countertop templating is done after the base units are confirmed on site.</p>
+            <p>Your units are made in our own plant. Countertop templating happens once the base units are confirmed on site.</p>
           </div></div>
           <div class="step"><div>
-            <h3>Installation &amp; handover</h3>
-            <p>Our team installs, aligns and finishes on site, then walks through the completed job with you along with care instructions.</p>
+            <h3>Installation</h3>
+            <p>Our team installs, aligns and finishes on site, together with any renovation works in your scope.</p>
+          </div></div>
+          <div class="step"><div>
+            <h3>Handover</h3>
+            <p>A final walkthrough of the finished job, with care instructions for your new kitchen.</p>
           </div></div>
         </div>
       </div>

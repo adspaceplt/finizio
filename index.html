@@ -3,11 +3,8 @@
   ════════════════════════════════════════════════════════════
   FINIZIO — Home
   ------------------------------------------------------------
-  Hero is text-only until a photo exists. To add one: drop
-  /assets/projects/hero.jpg in place, remove "hero-grid--text"
-  from the hero grid, and add after .hero-copy:
-    <div class="hero-media shot"><img src="/assets/projects/hero.jpg"
-      alt="A completed Finizio kitchen" loading="eager" /></div>
+  Hero and service-card images are Unsplash stock, hotlinked.
+  Swap any of them for your own photos by changing the src.
   ════════════════════════════════════════════════════════════
 -->
 <html lang="en">
@@ -106,7 +103,7 @@
     <!-- ═══ Hero ═══════════════════════════════════════════ -->
     <section class="hero">
       <div class="container">
-        <div class="hero-grid hero-grid--text">
+        <div class="hero-grid">
 
           <div class="hero-copy">
             <span class="eyebrow">Established since 2014</span>
@@ -135,6 +132,10 @@
           </div>
 
 
+
+          <div class="hero-media shot">
+            <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=900&h=1125&q=72" alt="A bright, modern kitchen interior" width="900" height="1125" loading="eager" decoding="async" fetchpriority="high" />
+          </div>
         </div>
       </div>
     </section>
@@ -367,7 +368,7 @@
 
       <div class="footer-base">
         <span>&copy; 2026 Finizio Premium (M) Sdn Bhd (202201025691). All rights reserved.</span>
-        <span>Negeri Sembilan · Malaysia</span>
+        <span>Negeri Sembilan · Malaysia · Interior photos via <a href="https://unsplash.com" target="_blank" rel="noopener noreferrer">Unsplash</a></span>
       </div>
     </div>
   </footer>

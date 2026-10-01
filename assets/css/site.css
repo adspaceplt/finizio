@@ -350,6 +350,10 @@ p { text-wrap: pretty; }
   transition: transform 240ms var(--ease), box-shadow 240ms var(--ease);
 }
 .card h3 { margin-bottom: 10px; }
+
+.card--media { padding: 0; overflow: hidden; }
+.card--media .card-body { padding: 26px 30px 30px; }
+.footer-base a { color: inherit; }
 .card p { color: var(--ink-2); font-size: 15px; }
 
 .card-icon {
@@ -751,6 +755,8 @@ td strong { font-weight: 600; }
   .stats, .stats--3 { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr; }
   .card { padding: 26px 24px; }
+  .card--media { padding: 0; }
+  .card--media .card-body { padding: 22px 24px 26px; }
   .step { grid-template-columns: 44px 1fr; gap: 14px; }
   .btn { width: 100%; }
   .btn-row { flex-direction: column; }

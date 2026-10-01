@@ -354,6 +354,7 @@ p { text-wrap: pretty; }
 .card--media { padding: 0; overflow: hidden; }
 .card--media .card-body { padding: 26px 30px 30px; }
 .footer-base a { color: inherit; }
+.footer-base a:hover { color: var(--brand); }
 .card p { color: var(--ink-2); font-size: 15px; }
 
 .card-icon {
